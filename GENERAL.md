@@ -17,9 +17,19 @@ growth is with respect to input
 ## JS methods, expressions
 
 **predictables**  
-- math, lookups, saving, running a statement, greater/less than are always *constant* .pop(), arr[0], ect. 
+- math, lookups, saving, running a statement, greater/less than are always *constant* ie. .pop(), arr[0], ect. 
 - shift and unshift must move every element to a direction once, so they are *linear*, also a simple loop like for loop  
 - nlogn for sort, but more details later
-- if you have a callback to consider it can *depend on* callback forEach, reduce  
 
+# task 1 in index.js is about solve a task in O(n) insted of O(n^2)
+
+>In terms of performance, the second approach ("caching approach") using caching should be more performant than the first approach ("my first thought"). This is because: 
+>>- the first approach iterates over the entire array *`for each (!)` element to check whether it is already in the sorted array or not, which leads to an `O(n^2)` time complexity*. 
+>>- On the other hand, the second approach uses a hash table to cache the elements as they are encountered, which provides *constant-time lookup for each element and reduces the time complexity to `O(n)`*.
+>>- In addition to the improved time complexity, the second approach also reduces the memory usage by `only storing unique elements in the result array`, whereas the first approach creates a new array for each element and then sorts the entire array.
+>Therefore, it is generally recommended to use a `hash table` or `caching approach` for unique sorting when dealing with large arrays to optimize performance and memory usage.
+
+**CACHING is always a tradeoff in favor of time complexity against space complexity**
+
+# task 2 in index.js is about caching
 
