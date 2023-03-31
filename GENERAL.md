@@ -22,7 +22,7 @@ growth is with respect to input
 - nlogn for sort, but more details later  
 ---
 # THE PRACTICAL WAY  
-*below every task has some tries before the optimalized solution, the point is: the first ones always created as I check the task and tring to solve it asap this way I can make logical connections easier*  
+*below every task has some tries before the optimized solution, the point is: the first ones always created as I check the task and tring to solve it asap this way I can make logical connections easier*  
 
 # task 1 in index.js is about solve a task in O(n) insted of O(n^2)  
 
@@ -36,6 +36,11 @@ growth is with respect to input
 
 # task 2 in index.js is about caching  
 
->About "first try": first mistake was to do anything before `if statement!` furthermore it uses a `global(or modular) scope` cache obj and mutates that. Later I also divided this whole accomplishment to more fn than just do everything in one.  
->Important that I placed the whole context into a closure. You pass the arg to the return fn at invoke, this way I can use caching without rerendering it. 
+>About "first try": first mistake was to do anything before `if statement!` (never acceptable as running unnesseceary calculations, mechanics, ect.) furthermore it uses a `global(or modular) scope` cache obj and mutates that. Later I also divided this whole accomplishment to more fn than just do everything in one.  
+>Important that I placed the whole context into a closure. You pass the arg to the return fn at invoke, this way I can use caching without rerendering it.
+>The calculator fn passed as an arg for generic approach  
+
+# task 3 recursion  
+
+****
 

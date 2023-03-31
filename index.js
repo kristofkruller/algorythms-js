@@ -1,7 +1,6 @@
 // TASK 1 
 
     // transform simple sorting algorythm to unique sort - it shd not return any duplicate val as output ie. input [1,1,1,12,,3,33,3] => [1,3,12,33];
-    const testArray = [1,1,7,7,7,1,3,7,4,1,1,1,1,0];
 
     // my first thought:
     // const uniqueSort = (input) => {
@@ -28,8 +27,8 @@
         result.sort((a,b) => a - b);
         return console.log("**TASK1** Sorted", result)
     }
-
-    uniqueSort(testArray);
+    // const testArray = [1,1,7,7,7,1,3,7,4,1,1,1,1,0];
+    // uniqueSort(testArray);
 
 // TASK 2
 
@@ -53,29 +52,30 @@
     // squareTen(4);
     // squareTen(4);
     // squareTen(4);
-    const cacheCalc = () => {
+    function square(num) {
+        let counter = num;
+        for (let index = 1; index < 10; index++) {
+            counter *= num;
+        }
+        return counter;
+    }
+    const cacheCalc = (calculator) => {
         const squareTenCache = {};
-        function square(num) {
-            let counter = num;
-            for (let index = 1; index < 10; index++) {
-                counter *= num;
-            }
-            return counter;
-        } 
+        // return fn will handle arguments passed to calc
         return function(number) {
             if (squareTenCache[number]) return console.log("already cached:", squareTenCache[number]); // only a constant pick
-            let calc = square(number);
+            let calc = calculator(number);
             squareTenCache[number] = calc;
             return console.log(calc, squareTenCache)
         }
     }
-    const memoSquare = cacheCalc();
-    memoSquare(2);
-    memoSquare(2);
-    memoSquare(3);
-    memoSquare(4);
-    memoSquare(4);
-    memoSquare(4);
+    // const memoSquare = cacheCalc(square);
+    // memoSquare(2);
+    // memoSquare(2);
+    // memoSquare(3);
+    // memoSquare(4);
+    // memoSquare(4);
+    // memoSquare(4);
 
-
+// TASK 3
 
