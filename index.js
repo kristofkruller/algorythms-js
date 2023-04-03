@@ -79,3 +79,23 @@
 
 // TASK 3
 
+    // transformin iteration to recursion
+
+    // function joinElems(array, join) {
+    //     let res = '';
+    //     for (let idx = 0; idx < array.length - 1; idx++) {
+    //         res += array[idx] + join;      
+    //     }
+    //     return console.log(res)
+    // }
+    function joinElems(array, join) {
+        let res = '';
+        function recur(idx, ret){
+            ret += array[idx];
+            if (idx === array.length - 1) return res = ret;
+            recur(idx + 1, ret + join);
+        }
+        recur(0, '');
+        // console.log(res); //return
+    }
+    // joinElems(['s','cr','t cod','%'], 'e');

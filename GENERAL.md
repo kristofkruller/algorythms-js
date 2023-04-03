@@ -42,5 +42,37 @@ growth is with respect to input
 
 # task 3 recursion  
 
-****
+**recursion is always an iteration loop, there are cases when it is more clear to use (e.g. nested data structures)**  
+*wrapper function*  
+```  
+fn memoLoop(i, end) {
+    if (i < end ) {
+        memoLoop(i+1, end);
+    }
+    //implicit return
+} 
+```  
+or with closure:  
+```  
+fn wrapperLoop(start, end){
+    fn recurse(i){
+        if(i < end) recurse(i + 1);
+    }
+    recurse(start);
+}
+```  
+*accumulator example - joining strings*  
+```  
+    function joinElems(array, join) {
+        let res = '';
+        function recur(idx, ret){
+            ret += array[idx];
+            if (idx === array.length - 1) return res = ret;
+            recur(idx + 1, ret + join);
+        }
+        recur(0, '');
+        // console.log(res); //return
+    }
+```  
+by this we are not only incrementing an idex, but saving our result as well. That is the accumulator value in this case the "ret / res" variables.
 
