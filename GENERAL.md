@@ -43,6 +43,12 @@ growth is with respect to input
 # task 3 recursion  
 
 **recursion is always an iteration loop, there are cases when it is more clear to use (e.g. nested data structures)**  
+
+build importance prority list  
+> * declare condition of completion / indentify base case - so when to stop    
+> * indentify recursive cases and return where appropriate  
+> * by the book: write procedures for each case that bring closer to the base (or goal)  
+
 *wrapper function*  
 ```  
 fn memoLoop(i, end) {

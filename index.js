@@ -99,3 +99,40 @@
         // console.log(res); //return
     }
     // joinElems(['s','cr','t cod','%'], 'e');
+
+// TASK 4
+
+    // function binarySerach(list, item) {
+    //     let low = 0;
+    //     let high = list.length - 1;
+    //     while (low <= high) {
+    //         const mid = Math.floor((low + high) / 2);
+    //         const guess = list[mid];
+    //         if (guess === item) return console.log(mid);
+    //         if (guess > item) high = mid - 1;
+    //         else low = mid + 1;
+    //     }
+    //     return console.log("not found")
+    // }
+
+    // binarySerach([1,2,3,4,5,6,7,8,9,10], 6);
+
+    function qs(list, low, hi){
+      if (low >= hi) return;
+      
+    }
+    function partition(list, low, hi){
+      const pivot = list[hi];
+      let idx = low - 1;
+      for(i = low; i<hi; i++) {
+        if (list[i] <= pivot) {
+          idx++;
+          const tmp = list[i];
+          list[i] = list[idx];
+          list[idx] = tmp;
+        }
+      }
+      idx++;
+      list[hi] = list[idx];
+      list[idx] = pivot;
+    }
